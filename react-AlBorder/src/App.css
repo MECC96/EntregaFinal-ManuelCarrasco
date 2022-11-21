@@ -1,7 +1,15 @@
-.App {
+/*Seccion CartWitget*/
+.cart{
+  
+  background-color: #F4AC94;
+}
+.cart:hover{
+  background-color: #D66C52;
+}
+/*Seccion Header*/
+.header {
   text-align: center;
-  background-color: #dedede;
-  height: 100vh;
+  background-color: #F7D0CB;
 }
 
 .App-header {
@@ -13,4 +21,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+/*Carousel*/
+.carousel-item>img{
+  width: 75%;
+  height: 30em;
 }
