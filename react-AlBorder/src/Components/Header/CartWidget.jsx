@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CartWidget() {
+const CartWidget = () => {
     return (
         <div>
             <button type="button" className="btn cart position-relative">
