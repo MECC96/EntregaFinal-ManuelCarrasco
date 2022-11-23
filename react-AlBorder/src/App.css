@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 /*Seccion CartWitget*/
 .cart{
-  
   background-color: #F4AC94;
 }
 .cart:hover{
@@ -11,7 +11,14 @@
   text-align: center;
   background-color: #F7D0CB;
 }
-
+.navbar{
+  background-color: #F4AC94;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bolder;
+}
+.nav-link{
+  color: #dedede
+}
 .App-header {
   background-color: #dedede;
   min-height: 100vh;
@@ -27,4 +34,13 @@
 .carousel-item>img{
   width: 75%;
   height: 30em;
+}
+/*Items*/
+.card{
+  border: 2px solid #F7D0CB;
+}
+
+.card-body>.btn{
+  background-color: #D66C52;
+  border-color: #F4AC94;
 }
