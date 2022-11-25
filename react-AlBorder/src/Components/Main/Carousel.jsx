@@ -3,7 +3,7 @@ import React from 'react'
 const Carousel = ({imgUno, imgDos, imgTres}) => {
     return (
         <div className="container-fluid">
-            <div className="row d-flex justify-content-center">
+            <div className="row d-flex justify-content-center my-3">
                 <div id="carouselExampleIndicators" className="carousel slide my-1" data-bs-ride="true">
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

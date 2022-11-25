@@ -44,3 +44,10 @@
   background-color: #D66C52;
   border-color: #F4AC94;
 }
+/*Clients*/
+.clients>img{
+  margin-top: 1em;
+  align-self: center;
+  border-radius: 50%;
+  width: 12em;
+}
