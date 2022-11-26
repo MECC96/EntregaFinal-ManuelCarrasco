@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+body{
+  background-image: url("../public/images/fondo.png");
+  background-position:center ;
+  background-size: cover;
+  font-family: 'Rubik', sans-serif;
+}
 /*Seccion CartWitget*/
 .cart{
   background-color: #F4AC94;
@@ -17,17 +23,16 @@
   font-weight: bolder;
 }
 .nav-link{
-  color: #dedede
+  color: #FFDEDE
 }
 .App-header {
-  background-color: #dedede;
+  background-color: #FFDEDE;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 /*Carousel*/
@@ -39,10 +44,17 @@
 .card{
   border: 2px solid #F7D0CB;
 }
-
-.card-body>.btn{
+.card>img{
+  align-self: center;
+  width: 10em;
+}
+.btn{
   background-color: #D66C52;
   border-color: #F4AC94;
+}
+.btn:hover{
+  background-color:#F4AC94 ;
+  border-color: #F7D0CB;
 }
 /*Clients*/
 .clients>img{
