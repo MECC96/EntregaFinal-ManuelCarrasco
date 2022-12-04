@@ -5,6 +5,14 @@ body{
   background-size: cover;
   font-family: 'Rubik', sans-serif;
 }
+
+h3{
+  color: #FFDEDE;
+  background-color: #F4AC94;
+  border-radius: 5px;
+  width: 30%;
+  margin: 0 auto;
+}
 /*Seccion CartWitget*/
 .cart{
   background-color: #F4AC94;
@@ -22,17 +30,11 @@ body{
   font-family: 'Rubik', sans-serif;
   font-weight: bolder;
 }
-.nav-link{
+.nav-item>.nav-link{
   color: #FFDEDE
 }
-.App-header {
-  background-color: #FFDEDE;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link,.dropdown-item.active, .dropdown-item:active{
+  color: #FEFEFE;
 }
 
 /*Carousel*/
