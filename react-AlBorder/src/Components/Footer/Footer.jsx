@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Footer = () => {
     return (
@@ -8,7 +7,7 @@ const Footer = () => {
                     Footer
                 </div>
                 <div className="col-md-4">
-                <img src="images/border-logo.png" alt="AlBorder logo" width={250}/>
+                <img src="../images/border-logo.png" alt="AlBorder logo" width={250}/>
                 </div>
                 <div className="col-md-4 d-flex align-items-center justify-content-center">
                     Footer

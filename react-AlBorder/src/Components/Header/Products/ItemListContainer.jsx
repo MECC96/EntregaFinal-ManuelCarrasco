@@ -1,15 +1,23 @@
-import React from 'react'
+import {useState, useEffect} from "react";
+import {products} from "../../../utils/products";
+import { customFetch } from "../../../utils/customFetch";
+import ItemList from "./ItemList";
 
-const ItemListContainer = ({greetings}) =>{
+const ItemListContainer = () =>{
+    const [items , setItems] = useState([]);
+    
+    useEffect(() => {
+        customFetch(products)
+            .then(data => {
+                setItems(data)
+            })
+    }, [])
+    
     return (
         <div className="container">
-            <div className="row">
-                <div className="col-md-12 alert alert-info text-center">
-                    {greetings}
-                </div>
-            </div>
+            <ItemList item={items}/>
         </div>
     )
 }
 
-export default ItemListContainer
+export default ItemListContainer;
