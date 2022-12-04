@@ -1,8 +1,7 @@
-import React from 'react'
 
 const Form = () => {
     return (
-        <div className="container-fluid my-3">
+        <div className="container-fluid my-3 d-flex flex-column">
             <h3 className='text-center p-3'>Contáctanos</h3>
             <div className="row d-flex justify-content-center">
                 <div className="col-md-7 header my-3 shadow m-3 py-5 rounded">
