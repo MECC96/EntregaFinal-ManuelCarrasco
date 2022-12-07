@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 const Item = ({ ele }) => {
   const { image, name, price } = ele;
+
   return (
     <div className="col-md-3 my-5">
       <div className="card shadow m-2 py-5 rounded flex-column">
@@ -11,9 +12,8 @@ const Item = ({ ele }) => {
             <h6 className="card-title">{name}</h6>
           </Link>
           <p>
-            <b>${price}</b>
+            <span>${price}</span>
           </p>
-          <button className="btn btn-primary">Agregar al Carrito</button>
         </div>
       </div>
     </div>
