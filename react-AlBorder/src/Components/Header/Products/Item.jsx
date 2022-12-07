@@ -1,22 +1,23 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const Item = ({ele}) => {
-    const {image, name, description, price} = ele;
-return (
-    <div className='col-md-4'>
-        <div className="card shadow m-5 rounded">
-            <img src={image} className="card-image-top mt-2" alt={name}/>
-            <div className="card-body text-center">
-                <h6 className="card-title">{name}</h6>
-                <p className="card-text">{description}</p>
-                <p><b>${price}</b></p>
-                <Link to={"/item/" + ele.id} className="text-decoration-none text-dark">
-                    <button className="btn btn-primary">Ver Descripcion</button>
-                </Link>
-            </div>
+const Item = ({ ele }) => {
+  const { image, name, price } = ele;
+  return (
+    <div className="col-md-3 my-5">
+      <div className="card shadow m-2 py-5 rounded flex-column">
+        <img src={image} className="card-image-top mt-2" alt={name} />
+        <div className="card-body text-center">
+          <Link to={"/item/" + ele.id} className="text-dark">
+            <h6 className="card-title">{name}</h6>
+          </Link>
+          <p>
+            <b>${price}</b>
+          </p>
+          <button className="btn btn-primary">Agregar al Carrito</button>
         </div>
+      </div>
     </div>
-    )
-}
+  );
+};
 
 export default Item;
