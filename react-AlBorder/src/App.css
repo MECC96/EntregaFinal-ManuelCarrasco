@@ -1,65 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-body{
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+body {
   background-image: url("../public/images/fondo.png");
-  background-position:center ;
+  background-position: center;
   background-size: cover;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
-h3{
-  color: #FFDEDE;
-  background-color: #F4AC94;
+h1,
+h3 {
+  color: #ffdede;
+  background-color: #f4ac94;
   border-radius: 5px;
   width: 30%;
   margin: 0 auto;
 }
 /*Seccion CartWitget*/
-.cart{
-  background-color: #F4AC94;
+.cart {
+  background-color: #f4ac94;
 }
-.cart:hover{
-  background-color: #D66C52;
+.cart:hover {
+  background-color: #d66c52;
 }
 /*Seccion Header*/
 .header {
   text-align: center;
-  background-color: #F7D0CB;
+  background-color: #f7d0cb;
 }
-.navbar{
-  background-color: #F4AC94;
-  font-family: 'Rubik', sans-serif;
+.navbar,
+.drop {
+  background-color: #f4ac94;
+  font-family: "Rubik", sans-serif;
   font-weight: bolder;
 }
-.nav-item>.nav-link{
-  color: #FFDEDE
+.nav-item > .nav-link,
+.dropdown-item {
+  color: #ffdede;
 }
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link,.dropdown-item.active, .dropdown-item:active{
-  color: #FEFEFE;
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link,
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #fefefe;
 }
 
 /*Carousel*/
-.carousel-item>img{
+.carousel-item > img {
   width: 75%;
   height: 30em;
 }
 /*Items*/
-.card{
-  border: 2px solid #F7D0CB;
+.card {
+  border: 2px solid #f7d0cb;
 }
-.card>img{
+.card > img {
   align-self: center;
   width: 10em;
 }
-.btn{
-  background-color: #D66C52;
-  border-color: #F4AC94;
+.btn {
+  background-color: #d66c52;
+  border-color: #f4ac94;
 }
-.btn:hover{
-  background-color:#F4AC94 ;
-  border-color: #F7D0CB;
+.btn:hover {
+  background-color: #f4ac94;
+  border-color: #f7d0cb;
+}
+/*items detail*/
+.card > .img__detail {
+  width: 20em;
 }
 /*Clients*/
-.clients>img{
+.clients > img {
   margin-top: 1em;
   align-self: center;
   border-radius: 50%;
