@@ -2,12 +2,12 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Header/Navbar";
 import ItemListContainer from "./Components/Header/Products/ItemListContainer";
+import ItemDetailContainer from "./Components/Header/Products/ItemDetailContainer";
 import Intro from "./Components/Main/Intro";
 import Clients from "./Components/Main/Comments/Clients";
 import Form from "./Components/Main/Form";
 import Footer from "./Components/Footer/Footer";
 import Error404 from "./Error404";
-import ItemDetailContainer from "./Components/Header/Products/ItemDetailContainer";
 
 const App = () => {
   return (
