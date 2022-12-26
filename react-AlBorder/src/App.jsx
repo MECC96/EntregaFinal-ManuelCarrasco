@@ -1,13 +1,14 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route,} from "react-router-dom";
 import Navbar from "./Components/Header/Navbar";
-import ItemListContainer from "./Components/Header/Products/ItemListContainer";
-import ItemDetailContainer from "./Components/Header/Products/ItemDetailContainer";
+import ItemListContainer from "./Components/Main/Products/ItemListContainer";
+import ItemDetailContainer from "./Components/Main/Products/ItemDetailContainer";
 import Intro from "./Components/Main/Intro";
 import Clients from "./Components/Main/Comments/Clients";
 import Form from "./Components/Main/Form";
 import Footer from "./Components/Footer/Footer";
 import Error404 from "./Error404";
+//import Loader from "./Loader";
 
 const App = () => {
   return (
@@ -18,8 +19,8 @@ const App = () => {
         tagTres={"Clientes"}
         tagCuatro={"Contáctanos"}
       />
-      <Routes>
-        <Route path={"/"} element={<ItemListContainer />} />
+      <Routes> 
+        <Route path={"/"} element={<ItemListContainer/>}/>
         <Route path={"/category/:id"} element={<ItemListContainer />} />
         <Route path={"/item/:id"} element={<ItemDetailContainer />} />
         <Route path={"/Quienes-Somos"} element={<Intro />} />

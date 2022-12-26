@@ -2,13 +2,13 @@ import { useState } from "react";
 
 const ItemCount = ({ stock }) => {
   const [counter, setCount] = useState(1);
-
+  
   const increase = () => counter < stock && setCount(counter + 1);
   const decrement = () => counter > 1 && setCount(counter - 1);
   const reset = () => setCount(1);
   const onAdd = () =>
     stock > 0 &&
-    console.log("Agregaste: " + counter + " Productos al Carrito!");
+    alert("Agregaste: " + counter + " Productos al Carrito!");
 
   return (
     <div>
