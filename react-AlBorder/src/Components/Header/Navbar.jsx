@@ -11,6 +11,7 @@ const Navbar = ({ tagUno, tagDos, tagTres, tagCuatro }) => {
               <img
                 src="../images/border-logo.png"
                 alt="AlBorder logo"
+                title="Home"
                 width={100}
               />
             </NavLink>

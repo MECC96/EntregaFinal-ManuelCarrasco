@@ -1,15 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-const ItemCount = ({ stock }) => {
-  const [counter, setCount] = useState(1);
+const ItemCount = ({ stock , onAdd}) => {
+  const [counter, setCounter] = useState(1);
+  const [itemStock, setItemStock] = useState(stock);
+  const [sold, setSold] = useState(false);
   
-  const increase = () => counter < stock && setCount(counter + 1);
-  const decrement = () => counter > 1 && setCount(counter - 1);
-  const reset = () => setCount(1);
-  const onAdd = () =>
-    stock > 0 &&
-    alert("Agregaste: " + counter + " Productos al Carrito!");
-
+  const increase = () => counter < itemStock && setCounter(counter + 1);
+  const decrement = () => counter > 1 && setCounter(counter - 1);
+  const reset = () => setCounter(1);
+  const addToCart = (quantity) =>{
+    if (counter <= itemStock) {
+      setCounter(1);
+      setItemStock(itemStock - quantity);
+      setSold(true);
+      onAdd(quantity);
+    }
+  }
+  useEffect(()=>{
+    setItemStock(stock)
+  }, [stock])
   return (
     <div>
       <div>
@@ -25,13 +35,13 @@ const ItemCount = ({ stock }) => {
         Reset
       </button>
       <div>
-        <button className="btn btn-primary" onClick={onAdd}>
+        {sold ? <Link to={"/cart"} className="btn btn-primary">Terminar Mi Compra</Link> : <button className="btn btn-primary" onClick={() => { addToCart(counter) }}>
           Agregar a Carrito
-        </button>
+        </button>}
       </div>
       <div>
         <p className="py-2">
-          <span>Stock: {stock - counter}</span>
+          <span>Stock: {itemStock - counter}</span>
         </p>
       </div>
     </div>

@@ -112,11 +112,20 @@ h3 {
   90% , 100% { content: 'Loading...'}
 }
 /*Seccion CartWitget*/
-.cart {
+.cart{
   background-color: #f4ac94;
 }
-.cart:hover {
+.cart:hover{
   background-color: #d66c52;
+}
+
+td,th{
+  text-align: center;
+  vertical-align: middle;
+}
+
+td>img{
+  border-radius:2px;
 }
 /*Seccion Header*/
 .header {
