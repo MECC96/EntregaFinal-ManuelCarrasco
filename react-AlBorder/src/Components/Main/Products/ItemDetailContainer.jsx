@@ -1,26 +1,31 @@
 import { useEffect, useState } from "react";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 import { useParams } from "react-router-dom";
-import Loader from "../../../Loader";
-import { customFetch } from "../../../utils/customFetch";
-import { products } from "../../../utils/products";
 import ItemDetail from "./ItemDetail";
+import Loader from "../../../Loader";
 
 const ItemDetailContainer = () => {
-  const [loading, setLoading] = useState(true)
   const [item, setItem] = useState([]);
+  const [loader, setLoader] = useState(true)
   const { id } = useParams();
 
-  useEffect(() => {
-    customFetch(
-      products.find((ele) => ele.id === parseInt(id))
-    , setLoading).then((data) => {
-      setItem(data);
-    });
-  }, [id]);
+      // Se hace consulta al documento, usando el ID
+      useEffect(() => {
+        const db = getFirestore();
+        const item = doc(db, "productos", id);
+        getDoc(item).then((snapShot) => {
+            if (snapShot.exists()) {
+                setItem({id:snapShot.id, ...snapShot.data()});
+                setLoader(false);
+            } else {
+                console.log("El item no se encuentra!");
+            }
+        });
+    }, [id]);
 
   return (
     <div className="container my-5">
-      {loading ? <Loader/> : <ItemDetail item={item} />}
+      {loader? <Loader/> : <ItemDetail item={item}/>}
     </div>
   );
 };
