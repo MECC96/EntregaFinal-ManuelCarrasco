@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { Link } from "react-router-dom";
-import { CartContext } from "../Context/CartContext"
+import { CartContext } from "../Context/CartContext";
+import { ToastContainer } from 'react-toastify';
 const Cart = () => {
     const {cart, cartTotal, clearCart, removeItem, sumTotal} = useContext(CartContext);
 
@@ -23,7 +24,7 @@ const Cart = () => {
                 <h1 className="text-center mt-5">Tus Productos</h1>
                 <div className="row my-5">
                     <div className="col-md-12">
-                    <table class="table table-striped table-hover">
+                    <table className="table table-striped table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">&nbsp;</th>
@@ -44,15 +45,16 @@ const Cart = () => {
                                 </tr>))}
                                 <tr>
                                     <td>&nbsp;</td>
-                                    <th colSpan={2} className="text-end">Total a Pagar</th>
+                                    <th colSpan={2} className="text-end">Total a Pagar (IVA incluido)</th>
                                     <th>${sumTotal()}</th>
-                                    <td><Link className="btn btn-primary">Finalizar Compra</Link></td>
+                                    <td><Link to={"/checkout"} className="btn btn-primary">Finalizar Compra</Link></td>
                                 </tr>
                         </tbody>
                     </table>
                     </div>
                 </div>
             </div>
+            <ToastContainer/>
         </div>
     )
 }
