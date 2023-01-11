@@ -10,6 +10,8 @@ import Footer from "./Components/Footer/Footer";
 import Error404 from "./Error404";
 import CartContextProvider from "./Components/Context/CartContext";
 import Cart from "./Components/Header/Cart";
+import Checkout from "./Components/Main/Checkout";
+import Ticket from "./Components/Main/Ticket";
 
 const App = () => {
   return (
@@ -26,9 +28,11 @@ const App = () => {
           <Route path={"/category/:id"} element={<ItemListContainer />} />
           <Route path={"/item/:id"} element={<ItemDetailContainer />} />
           <Route path={"/cart"} element={<Cart />} />
+          <Route path={"/checkout"} element={<Checkout />} />
           <Route path={"/Quienes-Somos"} element={<Intro />} />
           <Route path={"/Clientes"} element={<Clients />} />
           <Route path={"/Contáctanos"} element={<Form />} />
+          <Route path={"/ticket/:id"} element={<Ticket />} />
           <Route path={"*"} element={<Error404 />} />
         </Routes>
         <Footer />
