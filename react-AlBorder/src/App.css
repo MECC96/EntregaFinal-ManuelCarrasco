@@ -159,8 +159,9 @@ td>img{
   border: 2px solid #f7d0cb;
 }
 .card > img {
+  cursor: pointer;
   align-self: center;
-  width: 10em;
+  width: 13em;
 }
 .btn {
   background-color: #d66c52;
