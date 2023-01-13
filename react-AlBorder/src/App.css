@@ -14,6 +14,13 @@ h3 {
   width: 30%;
   margin: 0 auto;
 }
+
+.dogs{
+  height: 13.5em;
+  width: 50%;
+  border: #d66c52 solid .25em;
+  border-radius: 50%;
+}
 /*Loader*/
 .lds-heart {
   display: inline-block;
