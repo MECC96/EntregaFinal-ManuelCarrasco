@@ -13,7 +13,7 @@ const Checkout = () => {
     
     const [order, setOrder] = useState({});
 
-    const createOrder = () =>{
+    const createOrder = () =>{//Función que genera la orden y la envía a la DB. Al final, limpia el carrito.
         const date = new Date();
         const orden = {
             buyer: {name: name, email: email, phone: phone},
@@ -38,15 +38,15 @@ const Checkout = () => {
                 <div className="col-md-6">
                 <form>
                     <div className="mb-3">
-                        <label for="name" className="form-label">Nombre:</label>
+                        <label htmlFor="name" className="form-label">Nombre:</label>
                         <input type="text" className="form-control" id="name" placeholder="Escriba su nombre acá" onInput={(event) =>{setName(event.target.value)}} required/>
                     </div>
                     <div className="mb-3">
-                        <label for="email" className="form-label">Email:</label>
+                        <label htmlFor="email" className="form-label">Email:</label>
                         <input type="email" className="form-control" id="email" placeholder="Escriba su email acá" onInput={(event) =>{setEmail(event.target.value)}} required/>
                     </div>
                     <div className="mb-3">
-                        <label for="phone" className="form-label">Teléfono:</label>
+                        <label htmlFor="phone" className="form-label">Teléfono:</label>
                         <input type="tel" className="form-control" id="phone" placeholder="Escriba su número de teléfono acá" onInput={(event) =>{setPhone(event.target.value)}} required/>
                     </div>
                     <button type="button" className="btn btn-primary" onClick={createOrder}>Generar Orden</button>

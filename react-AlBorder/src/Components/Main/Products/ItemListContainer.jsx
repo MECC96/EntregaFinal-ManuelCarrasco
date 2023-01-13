@@ -9,7 +9,7 @@ const ItemListContainer = () => {
   const [loader, setLoader] = useState(true);
   const { id } = useParams();
 
-useEffect(() => {
+useEffect(() => { //Se buscan los productos en la DB, por ID.
   const db = getFirestore();
   const itemsCollection = collection(db, "productos");
   
@@ -18,7 +18,7 @@ useEffect(() => {
   getDocs(q).then((snapShot) => {
       setItems(snapShot.docs.map((doc) => ({id:doc.id, ...doc.data()})
       ))
-      setLoader(false);
+      setLoader(false); 
   });
 }, [id]);
 

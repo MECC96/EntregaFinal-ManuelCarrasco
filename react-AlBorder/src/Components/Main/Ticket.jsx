@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import { Link } from "react-router-dom";
 
 
-const Ticket = ({buyer, id}) => {
+const Ticket = ({buyer, id}) => { //Modal que aparece cuando el cliente culminó su compra.
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -19,10 +19,14 @@ const Ticket = ({buyer, id}) => {
                 </div>
                 <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
                     <Modal.Header closeButton>
-                        <Modal.Title className='text-center'>¡Gracias por tu compra!</Modal.Title>
+                        <div className="text-center">
+                            <Modal.Title>¡Gracias por tu compra!</Modal.Title>
+                        </div>
                     </Modal.Header>
                     <Modal.Body>
-                    <span className='text-center my-3'><b>Datos del Comprador</b></span>
+                        <div className='text-center'>
+                            <span className='my-3'><b>Datos del Comprador</b></span>
+                        </div>
                         <p><span>- Nombre y Apellido:</span> {buyer.buyer.name}</p>
                         <p><span>- Email:</span> {buyer.buyer.email}</p>
                         <p><span>- Teléfono:</span> {buyer.buyer.phone}</p>

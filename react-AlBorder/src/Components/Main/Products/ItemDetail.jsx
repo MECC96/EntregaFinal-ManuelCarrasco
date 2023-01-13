@@ -3,7 +3,7 @@ import ItemCount from "./ItemCount";
 import { CartContext } from "../../Context/CartContext";
 
 const ItemDetail = ({ item }) => {
-  const { image, name, description, price, stock } = item;
+  const { image, name, description, price, stock } = item; //Desestructuración del prop item. 
   const {addItem} = useContext(CartContext);
   const [itemStock, setItemStock] = useState(0);
   const onAdd = (quantity) => {

@@ -16,4 +16,4 @@ const Client = ({src, position}) => {
     )
 }
 
-export default Client
+export default Client;

@@ -7,7 +7,8 @@ const ItemCount = ({ stock , onAdd}) => {
   const [counter, setCounter] = useState(1);
   const [itemStock, setItemStock] = useState(stock);
   const [sold, setSold] = useState(false);
-  const toastAdd = () =>{
+  
+  const toastAdd = () =>{ //Notificación que avisa que un producto ha sido agregado al carrito
     toast.success('🐶 Tu producto se agregó al carrito!', {
       position: "top-center",
       autoClose: 2000,
@@ -21,7 +22,7 @@ const ItemCount = ({ stock , onAdd}) => {
   }
   const increase = () => counter < itemStock && setCounter(counter + 1);
   const decrement = () => counter > 1 && setCounter(counter - 1);
-  const reset = () => setCounter(1);
+  const reset = () => setCounter(1); // Hace reset de la cantidad de productos.
   const addToCart = (quantity) =>{
     if (counter <= itemStock) {
       setCounter(1);

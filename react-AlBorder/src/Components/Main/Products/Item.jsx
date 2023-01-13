@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Item = ({ ele }) => {
-  const { image, name, price } = ele;
+  const { image, name, price } = ele; //Desestructuración del prop ele. 
 
   return (
     <div className="col-md-4 my-5">

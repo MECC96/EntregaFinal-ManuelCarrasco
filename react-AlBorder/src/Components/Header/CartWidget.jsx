@@ -13,10 +13,10 @@ const Badge = ({itemsTotal})=>{
     )
 }
 
-const CartWidget = () => {
+const CartWidget = () => {//Render condicional del ícono del carrito, que depende de si está vacío o no.
     const {cartTotal} = useContext(CartContext);
     
     return cartTotal() > 0 ? <Badge itemsTotal={cartTotal()}/> : "";
 }
 
-export default CartWidget
+export default CartWidget;

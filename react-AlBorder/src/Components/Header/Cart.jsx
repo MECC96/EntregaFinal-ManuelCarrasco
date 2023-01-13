@@ -2,10 +2,11 @@ import { useContext } from "react"
 import { Link } from "react-router-dom";
 import { CartContext } from "../Context/CartContext";
 import { ToastContainer } from 'react-toastify';
+
 const Cart = () => {
     const {cart, cartTotal, clearCart, removeItem, sumTotal} = useContext(CartContext);
 
-    if (cartTotal() === 0) {
+    if (cartTotal() === 0) {//En caso de que el carrito no tenga productos, habrá un mesaje informativo junto con un botón a la página principal.
         return (
             <div className="container">
                 <div className="row my-5">
@@ -59,4 +60,4 @@ const Cart = () => {
     )
 }
 
-export default Cart
+export default Cart;
