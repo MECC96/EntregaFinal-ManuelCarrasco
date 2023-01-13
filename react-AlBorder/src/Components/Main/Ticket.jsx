@@ -27,11 +27,11 @@ const Ticket = ({buyer, id}) => {
                         <p><span>- Email:</span> {buyer.buyer.email}</p>
                         <p><span>- Teléfono:</span> {buyer.buyer.phone}</p>
                         <p><span>- Fecha de compra:</span> {buyer.orderDate}</p>
-                        <p><span>- Monto Total:</span> {buyer.total}</p>
+                        <p><span>- Monto Total:</span> ${buyer.total}</p>
                         <p><span>- Código de compra:</span> {id}</p>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Link className="btn btn-primary">Volver a la página principal</Link>
+                        <Link to={"/"} className="btn btn-primary">Volver a la página principal</Link>
                     </Modal.Footer>
                 </Modal>
             </div>
